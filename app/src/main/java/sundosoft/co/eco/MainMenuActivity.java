@@ -33,7 +33,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentActivity;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -63,6 +67,7 @@ public class MainMenuActivity extends Activity {
     LocationManager mLocationManager;
     MyLocationListener mLocationListener;
     Location mLocation;
+    private DrawerLayout mDrawerLayout;
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -73,6 +78,8 @@ public class MainMenuActivity extends Activity {
         gallery_bt = (ImageView) findViewById(R.id.gallery_bt);
         menu_bt = (ImageView) findViewById(R.id.menu_bt);
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
 
         ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.ACCESS_FINE_LOCATION);
         ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
@@ -113,7 +120,33 @@ public class MainMenuActivity extends Activity {
 
             @Override
             public void onClick(View v) {
+                mDrawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                menuItem.setChecked(true);
+                mDrawerLayout.closeDrawers();
+
+                int id = menuItem.getItemId();
+                String title = menuItem.getTitle().toString();
+
+                if(id == R.id.home){
+                        Toast.makeText(MainMenuActivity.this, title + ": 홈으로.", Toast.LENGTH_SHORT).show();
+                }
+                else if(id == R.id.setting){
+                    Toast.makeText(MainMenuActivity.this, title + ": 설정 정보", Toast.LENGTH_SHORT).show();
+                }
+                else if(id == R.id.userguide){
+                    Toast.makeText(MainMenuActivity.this, title + ": 사용안내", Toast.LENGTH_SHORT).show();
+                }
+                else if(id==R.id.statistic){
+                    Toast.makeText(MainMenuActivity.this, title + ": 등록현황", Toast.LENGTH_SHORT).show();
+                }
+
+                return true;
             }
         });
 
@@ -134,6 +167,8 @@ public class MainMenuActivity extends Activity {
             }
         }
     }
+
+
 
 
     @RequiresApi(api = Build.VERSION_CODES.O)

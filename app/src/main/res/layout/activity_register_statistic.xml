@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/register_scroll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <TableLayout
+        android:id="@+id/register_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_border"
+        android:padding="5dp">
+        <TableRow>
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="사진 및 데이터 등록현황"
+                android:textAlignment="center" />
+        </TableRow>
+        <TableRow>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"/>
+        </TableRow>
+    </TableLayout>
+
+
+    <TableLayout
+        android:id="@+id/recent_register_table"
+        android:layout_below="@+id/register_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_border"
+        >
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="최근등록사례"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                />
+        </TableRow>
+        <TableRow>
+           <ImageView
+               android:id="@+id/recent_image1"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_margin="10dp"
+               android:layout_weight="1"
+               android:scaleType="fitCenter"
+               android:background="@color/cardview_dark_background"
+               android:elevation="20dp"
+               />
+            <ImageView
+                android:id="@+id/recent_image2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@color/cardview_dark_background"
+                android:elevation="20dp"
+                />
+            <ImageView
+                android:id="@+id/recent_image3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@color/cardview_dark_background"
+                android:elevation="20dp"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recent_register_table"
+        android:background="@drawable/round_border"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="현재위치"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:gravity="center_horizontal" />
+        </TableRow>
+        <TableRow>
+          <fragment
+             android:id="@+id/register_map"
+             android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:layout_weight="1"/>
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
+</ScrollView>
