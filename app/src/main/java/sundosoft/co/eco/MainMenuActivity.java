@@ -144,6 +144,9 @@ public class MainMenuActivity extends Activity {
                 }
                 else if(id==R.id.statistic){
                     Toast.makeText(MainMenuActivity.this, title + ": 등록현황", Toast.LENGTH_SHORT).show();
+                    //등록현황으로 이동
+                    startActivity(new Intent(MainMenuActivity.this,RegisterStatisticActivity.class));
+                    finish();
                 }
 
                 return true;
