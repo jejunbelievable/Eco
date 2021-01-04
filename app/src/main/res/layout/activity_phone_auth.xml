@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".PhoneAuthActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:text="조사원 정보"
+        android:textSize="30sp"
+         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:ems="10"
+        android:gravity="center|center_horizontal"
+        android:text="조사자 정보 입력 후 인증 요청하여, 발송된 인증번호로 단말기 번호 인증을 하시기 바랍니다."
+        android:textSize="10sp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.30"
+                android:text="성명"
+                android:gravity="center" />
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.70"
+                android:ems="10"
+                android:hint="성명"
+                android:inputType="text"
+                android:privateImeOptions="defaultInputmode=korean;"/>
+        </TableRow>
+        <TableRow
+            android:gravity="center">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="0.30"
+                android:text="연락처"
+                android:gravity="center" />
+            <EditText
+                android:id="@+id/edtPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.70"
+                android:ems="10"
+                android:hint="휴대폰번호"
+                android:inputType="number" />
+        </TableRow>
+    </TableLayout>
+
+    <CheckBox
+        android:id="@+id/cbxInfoPrivacy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="개인정보 사용 동의" />
+
+    <CheckBox
+        android:id="@+id/cbxInfoInvest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="조사원 정보 기억" />
+
+    <Button
+        android:id="@+id/btnSendAuth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인증요청" />
+
+    <EditText
+        android:id="@+id/edtAuthNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="인증번호입력"
+        android:inputType="number"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnAuth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인증번호확인"
+        android:visibility="gone"/>
+
+</LinearLayout>

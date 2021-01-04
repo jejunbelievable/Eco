@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "594887536121",
+    "project_id": "articulate-life-300002",
+    "storage_bucket": "articulate-life-300002.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:594887536121:android:13fcf5b566df56097d6128",
+        "android_client_info": {
+          "package_name": "sundosoft.co.eco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "594887536121-oo7jigvhdpdukmp1q22vu79pumu0d92f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sundosoft.co.eco",
+            "certificate_hash": "cb790f835630af5700063843d1179fdc944fcad9"
+          }
+        },
+        {
+          "client_id": "594887536121-mdastq57j9th7d2ksen0i02uh0639653.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTH82yFt1e3RASCkOYam2pzq_TCmTJeuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "594887536121-mdastq57j9th7d2ksen0i02uh0639653.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
