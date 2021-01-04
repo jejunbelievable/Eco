@@ -108,57 +108,16 @@ public class MainMenuActivity extends Activity {
 
             }
         });
-//        menu_bt.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View v) {
-//                ArrayAdapter adapter= new ArrayAdapter(MainMenuActivity.this, android.R.layout.simple_list_item_1, mDatas);
-//                listview= (ListView)findViewById(R.id.listview);
-//                listview.setAdapter(adapter);
-//                listview.setOnItemClickListener(listener);
-//                registerForContextMenu(listview);
-//                listview.setVisibility(View.VISIBLE);
-//
-//            }
-//        });
-//
-    }
-//
-//    @Override
-//
-//    public void onCreateContextMenu(ContextMenu menu, View v,
-//                                    ContextMenu.ContextMenuInfo menuInfo) {
-//        getMenuInflater().inflate(R.menu.menu_listview, menu);
-//        super.onCreateContextMenu(menu, v, menuInfo);
-//    }
-//
-//    public boolean onContextItemSelected(MenuItem item) {
-//
-//        AdapterView.AdapterContextMenuInfo info= (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
-//        int index= info.position;
-//        switch( item.getItemId() ){
-//
-//
-//
-//            case R.id.home:
-//                Toast.makeText(this, mDatas.get(index)+" home", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.info:
-//                Toast.makeText(this, mDatas.get(index)+" info", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.setting:
-//                Toast.makeText(this, mDatas.get(index)+" setting", Toast.LENGTH_SHORT).show();
-//                break;
-//        }
-//             return true;
-//    };
-//    AdapterView.OnItemClickListener listener= new AdapterView.OnItemClickListener() {
-//        @Override
-//        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//            Toast.makeText(MainMenuActivity.this, mDatas.get(position), Toast.LENGTH_SHORT).show();
-//        }
-//    };
 
+        menu_bt.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+    }
 
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
