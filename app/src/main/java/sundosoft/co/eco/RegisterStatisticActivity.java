@@ -25,6 +25,10 @@ public class RegisterStatisticActivity extends AppCompatActivity {
         image3=findViewById(R.id.recent_image3);
         //최근 등록된 사진으로 image1, image2, imgage3 변경하기
 
+
+
+
+
         
 
     }
