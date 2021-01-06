@@ -117,13 +117,13 @@ public class MainMenuActivity extends Activity {
         });
 
         menu_bt.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
                 mDrawerLayout.openDrawer(GravityCompat.START);
             }
         });
 
+        //메뉴바(네비게이션뷰) 실행
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -134,19 +134,23 @@ public class MainMenuActivity extends Activity {
                 String title = menuItem.getTitle().toString();
 
                 if(id == R.id.home){
-                        Toast.makeText(MainMenuActivity.this, title + ": 홈으로.", Toast.LENGTH_SHORT).show();
+                    //홈으로
                 }
                 else if(id == R.id.setting){
-                    Toast.makeText(MainMenuActivity.this, title + ": 설정 정보", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainMenuActivity.this, title, Toast.LENGTH_SHORT).show();
                 }
                 else if(id == R.id.userguide){
-                    Toast.makeText(MainMenuActivity.this, title + ": 사용안내", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainMenuActivity.this, title, Toast.LENGTH_SHORT).show();
                 }
                 else if(id==R.id.statistic){
-                    Toast.makeText(MainMenuActivity.this, title + ": 등록현황", Toast.LENGTH_SHORT).show();
                     //등록현황으로 이동
-                    startActivity(new Intent(MainMenuActivity.this,RegisterStatisticActivity.class));
-                    finish();
+                    Intent registerIntent = new Intent(MainMenuActivity.this, RegisterStatisticActivity.class);
+                    startActivity(registerIntent);
+                }
+                else if(id==R.id.reservation){
+                    //사진전송예약
+                    Intent registerIntent = new Intent(MainMenuActivity.this, ReserveImageActivity.class);
+                    startActivity(registerIntent);
                 }
 
                 return true;

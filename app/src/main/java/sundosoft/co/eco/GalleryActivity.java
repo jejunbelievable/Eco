@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +19,11 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import androidx.core.content.res.ResourcesCompat;
+import androidx.fragment.app.FragmentActivity;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,7 +32,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GalleryActivity extends Activity {
+public class GalleryActivity extends FragmentActivity {
     private GridView gridView;
     private ImageAdapter gridAdapter;
     public static boolean ORIGIN_IS_REGISTER = false;
@@ -37,14 +41,19 @@ public class GalleryActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
-        Button back_button = (Button) findViewById(R.id.back_button);
+
+        /*Button back_button = (Button) findViewById(R.id.back_button);
         back_button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(GalleryActivity.this,MainMenuActivity.class));
                 finish();
             }
-        });
+        });*/
+
+        /*ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼*/
+
         Intent intent = getIntent();
         ORIGIN_IS_REGISTER = intent.getBooleanExtra("fromRegister",false);
 
@@ -74,6 +83,18 @@ public class GalleryActivity extends Activity {
         }
         return imageItems;
     }
+
+    /*@Override //뒤로가기 메뉴
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{//뒤로가기
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }*/
+
 
 
 }

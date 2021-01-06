@@ -84,8 +84,6 @@ public class ImageAdapter extends ArrayAdapter {
             }
         });
 
-
-
         return row;
     }
 

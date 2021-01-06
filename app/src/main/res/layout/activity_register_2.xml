@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+
+    <Button
+        android:id="@+id/redo_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다시작성"
+        android:elevation ="6dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:background="#004D40"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            android:text="사진등록"
+            android:layout_marginTop="40dp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+            <EditText
+                android:id="@+id/typeName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="6dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="출현종목"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:gravity="center_horizontal" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:fadeScrollbars="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/plant_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation ="6dp"
+                        android:text="식물" />
+
+                    <Button
+                        android:id="@+id/mammal_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="포유류"
+                        android:elevation ="6dp"
+                      />
+
+                    <Button
+                        android:id="@+id/bird_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="조류"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/insect_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="육상곤충"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/fish_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="담수어류"
+                        android:elevation ="6dp" />
+
+
+                    <Button
+                        android:id="@+id/inver_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="저서성대형무척추"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/topography_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="지형"
+                        android:elevation ="6dp"
+                        />
+
+                    <Button
+                        android:id="@+id/vegetation_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="식생"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/herptile_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="양서파충류"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/geology_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="지질"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/seaweed_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="해조류"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/cinver_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="해안무척추"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/frmtenvimt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="형성환경"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/fungus_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="고등균류"
+                        android:elevation ="6dp" />
+
+                    <Button
+                        android:id="@+id/bat_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="박쥐"
+                        android:elevation ="6dp"
+                        />
+
+                    <Button
+                        android:id="@+id/vegirating_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="식생보전등급판정"
+                        android:elevation ="6dp"
+                        />
+
+                    <Button
+                        android:id="@+id/normal_stat_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일반현황 구분코드"
+                        android:elevation ="6dp"
+                        />
+
+                    <Button
+                        android:id="@+id/bryo_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="선태식물"
+                        android:elevation ="6dp"
+                        />
+
+                    <Button
+                        android:id="@+id/spider_bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="거미"
+                        android:elevation ="6dp"
+                        />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="30dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_corner_white"
+                android:elevation="6dp"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정보입력"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="사진에 해당하는 정보들을 입력하여 등록합니다." />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+                <TableRow>
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="6dp"
+                        android:gravity="center_horizontal"
+                        android:text="제목"
+                        android:textSize="25dp"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/typeName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:elevation="1dp"
+                        android:inputType="textPersonName"
+                        android:textSize="15dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="6dp"
+                        android:gravity="center_horizontal"
+                        android:text="첨부파일*"
+                        android:textAlignment="center"
+                        android:textSize="25dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.195"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.276" />
+
+                    <ImageButton
+                        android:id="@+id/imageBt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:padding="10dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@android:mipmap/sym_def_app_icon" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:elevation="6dp"
+                        android:gravity="center_horizontal"
+                        android:text="위치정보*"
+                        android:textAlignment="center"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:id="@+id/location_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="위치정보가 없습니다."
+                        android:textSize="15dp" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="125dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:elevation="6dp"
+                        android:gravity="center_horizontal"
+                        android:text="특이사항"
+                        android:textAlignment="center"
+                        android:textSize="25dp" />
+
+                    <EditText
+                        android:id="@+id/other_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:elevation="1dp"
+                        android:inputType="textPersonName" />
+                </TableRow>
+            </TableLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <ImageButton
+                    android:id="@+id/send_bt"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:elevation="6dp"
+                    android:src="@mipmap/register_bt_foreground"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
