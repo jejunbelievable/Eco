@@ -81,7 +81,6 @@
             android:name=".ReserveImageDateActivity"
             android:screenOrientation="portrait" />
 
-
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"

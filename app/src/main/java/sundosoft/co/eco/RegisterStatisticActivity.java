@@ -9,6 +9,7 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -65,22 +67,18 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_statistic);
 
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
+
         image1=findViewById(R.id.recent_image1);
         image2=findViewById(R.id.recent_image2);
         image3=findViewById(R.id.recent_image3);
         //최근 등록된 사진으로 image1, image2, imgage3 변경하기
 
-        //지도 띄우기
-        /*if (savedInstanceState == null) {
-
-            RegisterMapFramgent mainFragment = new RegisterMapFramgent();
-            getSupportFragmentManager().beginTransaction().replace(R.id.register_map, mainFragment, "main").commit();
-        }*/
-
-        button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         textView1 = findViewById(R.id.textView1);
 
+        //지도
         manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         gpsListener = new GPSListener();
 
@@ -89,7 +87,7 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
@@ -139,7 +137,7 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
                 if (location != null) {
                     double latitude = location.getLatitude();
                     double longitude = location.getLongitude();
-                    String message = "Latitude : " + latitude + "\n Longitude : " + longitude;
+                    String message = "Latitude : " + latitude + "\nLongitude : " + longitude;
 
                     textView1.setText(message);
                     showCurrentLocation(latitude, longitude);
@@ -313,4 +311,16 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
     public void onGranted(int requestCode, String[] permissions) {
         Toast.makeText(getApplicationContext(),"permissions granted : " + permissions.length, Toast.LENGTH_SHORT).show();
     }
+
+    @Override //뒤로가기 메뉴
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{//뒤로가기
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

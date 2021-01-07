@@ -209,7 +209,6 @@ public class RegisterActivity extends AppCompatActivity {
                 Intent galleryIntent = new Intent(RegisterActivity.this, GalleryActivity.class);
                 galleryIntent.putExtra("fromRegister",FROM_REGISTER);
                 startActivity(galleryIntent);
-                finish();
                 isClicked=true;
             }
 

@@ -7,7 +7,6 @@ import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -18,7 +17,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -52,7 +50,6 @@ public class ViewActivity extends FragmentActivity implements OnMapReadyCallback
     String alt;
     File mFolder2;
     File mFile2;
-
     @RequiresApi(api = Build.VERSION_CODES.N)
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +58,6 @@ public class ViewActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
         ImageView photoView = findViewById(R.id.photoView);
         TextView dataView = findViewById(R.id.dataView);
-
         Button back_bt2 = findViewById(R.id.back_bt2);
         back_bt2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +66,6 @@ public class ViewActivity extends FragmentActivity implements OnMapReadyCallback
                 finish();
             }
         });
-
         Intent intent = getIntent();
         int pos = intent.getIntExtra("position",0);
 
@@ -118,5 +113,4 @@ public class ViewActivity extends FragmentActivity implements OnMapReadyCallback
         googleMap.animateCamera(CameraUpdateFactory.zoomIn());
         googleMap.animateCamera(CameraUpdateFactory.zoomTo(15), 2000, null);
     }
-
 }

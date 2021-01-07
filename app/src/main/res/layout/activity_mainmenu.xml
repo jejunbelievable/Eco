@@ -40,11 +40,11 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <ImageView
         android:id="@+id/photo_bt"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="@drawable/rounded_corners"
@@ -63,7 +63,7 @@
 
     <ImageView
         android:id="@+id/gallery_bt"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="@drawable/rounded_corners"
@@ -82,7 +82,7 @@
 
     <ImageView
         android:id="@+id/register_bt"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
         android:background="@drawable/rounded_corners"
@@ -104,7 +104,7 @@
         android:id="@+id/background_image"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@android:color/holo_green_dark"
+        android:background="@drawable/green_background"
         android:elevation="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -112,8 +112,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
-
 
     <ImageView
         android:id="@+id/imageView8"
@@ -128,7 +126,7 @@
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.06" />
 
 
     <ImageView
@@ -144,17 +142,17 @@
         app:layout_constraintHorizontal_bias="0.9"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.06" />
+
 
     <ImageView
         android:id="@+id/whole_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="true"
-        android:background="#1B5E20"
+        android:background="@drawable/main_background"
         android:elevation="0dp"
         android:scaleType="centerCrop"
-        android:src="@mipmap/main_background_foreground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

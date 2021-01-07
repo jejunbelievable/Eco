@@ -4,21 +4,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/light_gray">
+    android:layout_height="match_parent">
+
 
     <ImageView
         android:id="@+id/imageBackground2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="140dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/round_corner_white"
+        android:layout_width="380dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="112dp"
+        android:background="@drawable/rounded_corners"
         android:elevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -182,9 +179,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="포유류"
-                android:elevation ="6dp"
-                tools:layout_editor_absoluteX="111dp"
-                tools:layout_editor_absoluteY="65dp" />
+                android:elevation ="6dp"/>
 
             <Button
                 android:id="@+id/bird_bt"
@@ -201,7 +196,7 @@
 
             <Button
                 android:id="@+id/insect_bt"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="육상곤충"
                 android:elevation ="6dp"
@@ -228,7 +223,7 @@
 
             <Button
                 android:id="@+id/inver_bt"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="저서성대형무척추"
                 android:elevation ="6dp"
@@ -267,7 +262,7 @@
 
             <Button
                 android:id="@+id/herptile_bt"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="양서파충류"
                 android:elevation ="6dp"
@@ -306,7 +301,7 @@
 
             <Button
                 android:id="@+id/cinver_bt"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="해안무척추"
                 android:elevation ="6dp"
@@ -319,7 +314,7 @@
 
             <Button
                 android:id="@+id/frmtenvimt"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="형성환경"
                 android:elevation ="6dp"
@@ -332,7 +327,7 @@
 
             <Button
                 android:id="@+id/fungus_bt"
-                android:layout_width="100dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="고등균류"
                 android:elevation ="6dp"
@@ -358,7 +353,7 @@
 
             <Button
                 android:id="@+id/vegirating_bt"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="식생보전등급판정"
                 android:elevation ="6dp"
@@ -371,7 +366,7 @@
 
             <Button
                 android:id="@+id/normal_stat_bt"
-                android:layout_width="200dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="일반현황 구분코드"
                 android:elevation ="6dp"
@@ -384,7 +379,7 @@
 
             <Button
                 android:id="@+id/bryo_bt"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="선태식물"
                 android:elevation ="6dp"
@@ -414,7 +409,7 @@
 
     <HorizontalScrollView
         android:id="@+id/horizontalScrollView2"
-        android:layout_width="350dp"
+        android:layout_width="360dp"
         android:elevation ="6dp"
         android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -429,7 +424,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!--
             <Button
                 android:id="@+id/back_bt3"
                 android:layout_width="wrap_content"
@@ -440,8 +434,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-                -->
-
 
             <EditText
                 android:id="@+id/typeName1"
@@ -450,7 +442,7 @@
                 android:elevation="6dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="출현종목"
+                android:text="  출현종목"
                 android:textColor="#FFFFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -459,10 +451,10 @@
 
             <TextView
                 android:id="@+id/textView10"
-                android:layout_width="66dp"
-                android:layout_height="23dp"
+                android:layout_width="90dp"
+                android:layout_height="46dp"
                 android:elevation="6dp"
-                android:text="사진등록"
+                android:text="  사진등록"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -496,7 +488,6 @@
         android:layout_height="200dp"
         android:background="#004D40"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
