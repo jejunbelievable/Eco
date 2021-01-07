@@ -87,7 +87,7 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
