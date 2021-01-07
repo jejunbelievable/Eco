@@ -3,12 +3,14 @@
     android:id="@+id/register_scroll"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#9A1B5E20">
 
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp">
+    android:layout_marginTop="20dp"
+    android:padding="10dp">
 
     <TableLayout
         android:id="@+id/register_table"
@@ -16,6 +18,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/round_border"
+        android:elevation="20dp"
         android:padding="5dp">
         <TableRow>
             <TextView
@@ -24,7 +27,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:layout_weight="1"
-                android:padding="5dp"
+                android:padding="10dp"
+                android:elevation="20dp"
                 android:text="사진 및 데이터 등록현황"
                 android:textAlignment="center" />
         </TableRow>
@@ -41,7 +45,7 @@
                     android:id="@+id/prepare_et"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_weight="0.9"
                     android:layout_gravity="center"
                     android:text="23건"
                     android:textAlignment="center"/>
@@ -69,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/ic_register_bar"/>
 
             <LinearLayout
@@ -116,7 +120,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
+        android:elevation="20dp"
         android:background="@drawable/round_border"
         >
         <TableRow>
@@ -164,30 +169,65 @@
         </TableRow>
     </TableLayout>
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/recent_register_table"
         android:background="@drawable/round_border"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical"
+        android:elevation="20dp"
         android:padding="10dp">
-        <TableRow>
-            <TextView
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="현재위치"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <Button
+                android:id="@+id/button1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="현재위치"
-                android:textAlignment="center"
-                android:padding="5dp"
-                android:gravity="center_horizontal" />
-        </TableRow>
-        <TableRow>
-          <fragment
-             android:id="@+id/register_map"
-             android:layout_width="match_parent"
-              android:layout_height="200dp"
-              android:layout_weight="1"/>
-        </TableRow>
-    </TableLayout>
+                android:text="현재위치 확인하기" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="구글지도맵 내위치 확인하기"/>
+
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                class="com.google.android.gms.maps.SupportMapFragment"/>
+
+        </LinearLayout>
+
+        <!--
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/register_map"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:name="com.google.android.gms.maps.MapFragment"
+            />
+            -->
+
+    </LinearLayout>
 </RelativeLayout>
 </ScrollView>
