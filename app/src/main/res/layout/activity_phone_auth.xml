@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +14,9 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:text="조사원 정보"
+        android:textStyle="bold"
         android:textSize="30sp"
          />
 
@@ -27,16 +30,19 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
         <TableRow>
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.30"
                 android:text="성명"
                 android:gravity="center" />
             <EditText
                 android:id="@+id/edtName"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.70"
                 android:ems="10"
@@ -47,13 +53,14 @@
         <TableRow
             android:gravity="center">
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="0.30"
                 android:text="연락처"
                 android:gravity="center" />
             <EditText
                 android:id="@+id/edtPhoneNumber"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.70"
                 android:ems="10"
@@ -67,6 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_marginTop="10dp"
         android:text="개인정보 사용 동의" />
 
     <CheckBox
@@ -80,6 +88,7 @@
         android:id="@+id/btnSendAuth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="인증요청" />
 
     <EditText

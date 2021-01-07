@@ -12,14 +12,18 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.ButtonBarLayout;
 import androidx.fragment.app.FragmentActivity;
 
@@ -43,9 +47,11 @@ import java.util.Scanner;
 
 import static androidx.core.content.FileProvider.getUriForFile;
 import static sundosoft.co.eco.R.id.default_activity_button;
+import static sundosoft.co.eco.R.id.finish_date_button;
 import static sundosoft.co.eco.R.id.inver_bt;
+import static sundosoft.co.eco.R.id.src_atop;
 
-public class RegisterActivity extends Activity {
+public class RegisterActivity extends AppCompatActivity {
     String type = "";
     private static final int RESULT_LOAD_IMAGE = 1;
     ImageButton imageBt;
@@ -58,11 +64,15 @@ public class RegisterActivity extends Activity {
     String lat;
     String lon;
     @RequiresApi(api = Build.VERSION_CODES.N)
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_register_2);
 
-        Button back_bt3 = (Button) findViewById(R.id.back_bt3);
+        //Button back_bt3 = (Button) findViewById(R.id.back_bt3);
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
+
         Button redo_bt = (Button) findViewById(R.id.redo_bt);
 
         Button plant_bt = (Button) findViewById(R.id.plant_bt);
@@ -127,7 +137,6 @@ public class RegisterActivity extends Activity {
         }
 
 
-
         Button.OnClickListener onClickListener = new Button.OnClickListener() {
 
             @Override
@@ -172,14 +181,14 @@ public class RegisterActivity extends Activity {
         });
 
 
-        back_bt3.setOnClickListener(new View.OnClickListener(){
+        /*back_bt3.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(RegisterActivity.this,MainMenuActivity.class));
                 finish();
             }
-        });
+        });*/
 
         plant_bt.setOnClickListener(onClickListener); mammal_bt.setOnClickListener(onClickListener);
         bird_bt.setOnClickListener(onClickListener); insect_bt.setOnClickListener(onClickListener);
@@ -200,7 +209,6 @@ public class RegisterActivity extends Activity {
                 Intent galleryIntent = new Intent(RegisterActivity.this, GalleryActivity.class);
                 galleryIntent.putExtra("fromRegister",FROM_REGISTER);
                 startActivity(galleryIntent);
-                finish();
                 isClicked=true;
             }
 
@@ -219,6 +227,17 @@ public class RegisterActivity extends Activity {
             }
         });
 
+    }
+
+    @Override //뒤로가기 메뉴
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{//뒤로가기
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

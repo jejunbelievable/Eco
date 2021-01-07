@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <DatePicker
+        android:id="@+id/dataPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:calendarViewShown="false"/>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="전송날짜:"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+            <ImageButton
+                android:id="@+id/start_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_my_calendar"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:text="   ~   "
+                android:textSize="20dp"
+                android:gravity="center_horizontal" />
+            <ImageButton
+                android:id="@+id/finish_date_button"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@android:drawable/ic_menu_my_calendar"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="2021-01-05"
+                android:textSize="20dp"
+                android:visibility="invisible"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:id="@+id/start_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:textSize="20dp"
+                android:text="2021-01-05"
+                android:visibility="invisible"
+                android:gravity="center_horizontal" />
+            <TextView
+                android:id="@+id/finish_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="전송시간:"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:entries="@array/시간대"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:entries="@array/시간"
+                android:layout_weight="1"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/booking_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout"
+        android:text="전송예약"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

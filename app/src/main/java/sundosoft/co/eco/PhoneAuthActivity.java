@@ -1,6 +1,7 @@
 package sundosoft.co.eco;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -12,6 +13,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -33,6 +35,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PhoneAuthActivity extends AppCompatActivity {
 
+
     FirebaseAuth auth = FirebaseAuth.getInstance();
 
     String mVerificationId;
@@ -48,6 +51,10 @@ public class PhoneAuthActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_auth);
+
+        ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
+
         Log.v("sundo", "PhoneAuthActivity 동작");
 
         inputName        = (EditText)findViewById(R.id.edtName);
@@ -207,6 +214,18 @@ public class PhoneAuthActivity extends AppCompatActivity {
             }
         }
     };
+
+    @Override //뒤로가기 메뉴
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:{//뒤로가기
+                finish();
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
 
 
