@@ -70,7 +70,7 @@ public class ReserveImageDateActivity extends AppCompatActivity {
                 //예약 전송 버튼
                 day=spinner1.getSelectedItem().toString();
                 time=spinner2.getSelectedItem().toString();
-                Toast.makeText(ReserveImageDateActivity.this,"전송 예약 "+startDate+" "+endDate+" "+day+" "+time, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ReserveImageDateActivity.this,"전송예약 "+startDate+" "+endDate+" "+day+" "+time, Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
