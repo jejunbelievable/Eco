@@ -28,11 +28,19 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 allprojects {
     repositories {
         maven { url 'https://jitpack.io' }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -51,6 +59,10 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     implementation 'com.github.pedroSG94:AutoPermissions:1.0.3'
+<<<<<<< HEAD
+=======
+
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

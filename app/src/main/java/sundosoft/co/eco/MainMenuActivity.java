@@ -117,7 +117,6 @@ public class MainMenuActivity extends Activity {
         });
 
         menu_bt.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
                 mDrawerLayout.openDrawer(GravityCompat.START);

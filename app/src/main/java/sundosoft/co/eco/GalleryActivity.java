@@ -25,16 +25,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+=======
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 import androidx.core.content.res.ResourcesCompat;
+<<<<<<< HEAD
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
+=======
+import androidx.fragment.app.FragmentActivity;
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -48,8 +55,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+<<<<<<< HEAD
 
 public class GalleryActivity extends AppCompatActivity {
+=======
+public class GalleryActivity extends FragmentActivity {
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
     private GridView gridView;
     private ImageAdapter gridAdapter;
     public static boolean ORIGIN_IS_REGISTER = false;
@@ -62,6 +73,7 @@ public class GalleryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
         setContentView(R.layout.activity_gallery_2);
 
         ActionBar actionBar=getSupportActionBar();
@@ -93,6 +105,21 @@ public class GalleryActivity extends AppCompatActivity {
                 }
             }
         }
+=======
+        setContentView(R.layout.activity_gallery);
+
+        /*Button back_button = (Button) findViewById(R.id.back_button);
+        back_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GalleryActivity.this,MainMenuActivity.class));
+                finish();
+            }
+        });*/
+
+        /*ActionBar actionBar=getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼*/
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 
         Intent intent = getIntent();
         ORIGIN_IS_REGISTER = intent.getBooleanExtra("fromRegister",false);
@@ -143,7 +170,11 @@ public class GalleryActivity extends AppCompatActivity {
         return imageItems;
     }
 
+<<<<<<< HEAD
     @Override //뒤로가기 메뉴
+=======
+    /*@Override //뒤로가기 메뉴
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case android.R.id.home:{//뒤로가기
@@ -152,7 +183,12 @@ public class GalleryActivity extends AppCompatActivity {
             }
         }
         return super.onOptionsItemSelected(item);
+<<<<<<< HEAD
     }
+=======
+    }*/
+
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 
 
 }

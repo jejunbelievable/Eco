@@ -1,6 +1,10 @@
 package sundosoft.co.eco;
 
 import android.app.DatePickerDialog;
+<<<<<<< HEAD
+=======
+import android.content.Intent;
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,8 +19,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+<<<<<<< HEAD
 public class ReserveI
         mageDateActivity extends AppCompatActivity {
+=======
+public class ReserveImageDateActivity extends AppCompatActivity {
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
     private Button send_btn;
     private ImageButton calender1;
     private ImageButton calender2;
@@ -70,7 +78,11 @@ public class ReserveI
                 //예약 전송 버튼
                 day=spinner1.getSelectedItem().toString();
                 time=spinner2.getSelectedItem().toString();
+<<<<<<< HEAD
                 Toast.makeText(ReserveImageDateActivity.this,"전송 예약 "+startDate+" "+endDate+" "+day+" "+time, Toast.LENGTH_SHORT).show();
+=======
+                Toast.makeText(ReserveImageDateActivity.this,"전송예약 "+startDate+" "+endDate+" "+day+" "+time, Toast.LENGTH_SHORT).show();
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
                 finish();
             }
         });

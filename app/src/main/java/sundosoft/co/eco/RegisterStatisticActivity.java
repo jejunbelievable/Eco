@@ -9,7 +9,10 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+<<<<<<< HEAD
 import android.view.MenuItem;
+=======
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,7 +21,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+<<<<<<< HEAD
 import androidx.appcompat.app.ActionBar;
+=======
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -67,9 +73,12 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_statistic);
 
+<<<<<<< HEAD
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
 
+=======
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
         image1=findViewById(R.id.recent_image1);
         image2=findViewById(R.id.recent_image2);
         image3=findViewById(R.id.recent_image3);
@@ -82,6 +91,10 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
             getSupportFragmentManager().beginTransaction().replace(R.id.register_map, mainFragment, "main").commit();
         }*/
 
+<<<<<<< HEAD
+=======
+        button1 = findViewById(R.id.button1);
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
         button2 = findViewById(R.id.button2);
         textView1 = findViewById(R.id.textView1);
 
@@ -143,7 +156,11 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
                 if (location != null) {
                     double latitude = location.getLatitude();
                     double longitude = location.getLongitude();
+<<<<<<< HEAD
                     String message = "Latitude : " + latitude + "\nLongitude : " + longitude;
+=======
+                    String message = "Latitude : " + latitude + "\n Longitude : " + longitude;
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 
                     textView1.setText(message);
                     showCurrentLocation(latitude, longitude);
@@ -169,6 +186,36 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
                     Log.i("MyLocTest", "최근 위치2 호출");
                 }
 
+<<<<<<< HEAD
+
+                //위치 요청하기
+                manager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, minTime, minDistance, gpsListener);
+                //manager.removeUpdates(gpsListener);
+                Log.i("MyLocTest", "requestLocationUpdates() 내 위치2에서 호출시작");
+            }
+
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    class GPSListener implements LocationListener {
+        // 위치 확인되었을때 자동으로 호출됨 (일정시간 and 일정거리)
+        @Override
+        public void onLocationChanged(Location location) {
+            double latitude = location.getLatitude();
+            double longitude = location.getLongitude();
+            String message = "내 위치는 Latitude : " + latitude + "\nLongtitude : " + longitude;
+            textView1.setText(message);
+
+            showCurrentLocation(latitude, longitude);
+            Log.i("MyLocTest", "onLocationChanged() 호출되었습니다.");
+        }
+
+        @Override
+        public void onStatusChanged(String provider, int status, Bundle extras) {
+=======
 
                 //위치 요청하기
                 manager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, minTime, minDistance, gpsListener);
@@ -202,6 +249,13 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
 
         @Override
         public void onProviderEnabled(String provider) {
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
+
+        }
+
+        @Override
+<<<<<<< HEAD
+        public void onProviderEnabled(String provider) {
 
         }
 
@@ -209,6 +263,11 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
         public void onProviderDisabled(String provider) {
 
         }
+=======
+        public void onProviderDisabled(String provider) {
+
+        }
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -264,6 +323,7 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
         }
         Log.i("MyLocTest","onPause에서 removeUpdates() 되었습니다.");
     }
+<<<<<<< HEAD
 
     private void showCurrentLocation(double latitude, double longitude) {
         LatLng curPoint = new LatLng(latitude, longitude);
@@ -328,5 +388,59 @@ public class RegisterStatisticActivity extends AppCompatActivity implements Auto
         }
         return super.onOptionsItemSelected(item);
     }
+=======
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 
+    private void showCurrentLocation(double latitude, double longitude) {
+        LatLng curPoint = new LatLng(latitude, longitude);
+        map.animateCamera(CameraUpdateFactory.newLatLngZoom(curPoint, 15));
+        showMyLocationMarker(curPoint);
+    }
+
+    private void showMyLocationMarker(LatLng curPoint) {
+        if (myLocationMarker == null) {
+            myLocationMarker = new MarkerOptions(); // 마커 객체 생성
+            myLocationMarker.position(curPoint);
+            myLocationMarker.title("최근위치 \n");
+            myLocationMarker.snippet("*GPS로 확인한 최근위치");
+            myMarker = map.addMarker(myLocationMarker);
+        } else {
+            myMarker.remove(); // 마커삭제
+            myLocationMarker.position(curPoint);
+            myMarker = map.addMarker(myLocationMarker);
+        }
+
+        // 반경추가
+        if (circle1KM == null) {
+            circle1KM = new CircleOptions().center(curPoint) // 원점
+                    .radius(1000)       // 반지름 단위 : m
+                    .strokeWidth(1.0f);    // 선너비 0f : 선없음
+            //.fillColor(Color.parseColor("#1AFFFFFF")); // 배경색
+            circle = map.addCircle(circle1KM);
+
+        } else {
+            circle.remove(); // 반경삭제
+            circle1KM.center(curPoint);
+            circle = map.addCircle(circle1KM);
+        }
+
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        AutoPermissions.Companion.parsePermissions(this, requestCode, permissions, this);
+        //Toast.makeText(this, "requestCode : "+requestCode+"  permissions : "+permissions+"  grantResults :"+grantResults, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onDenied(int requestCode, String[] permissions) {
+        Toast.makeText(getApplicationContext(),"permissions denied : " + permissions.length, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onGranted(int requestCode, String[] permissions) {
+        Toast.makeText(getApplicationContext(),"permissions granted : " + permissions.length, Toast.LENGTH_SHORT).show();
+    }
 }

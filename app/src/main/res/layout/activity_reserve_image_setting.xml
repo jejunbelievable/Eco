@@ -113,7 +113,10 @@
                 android:textSize="20dp"
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
+<<<<<<< HEAD
 
+=======
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
             <Spinner
                 android:id="@+id/spinner1"
                 android:entries="@array/시간대"
@@ -121,7 +124,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 />
+<<<<<<< HEAD
 
+=======
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
             <Spinner
                 android:id="@+id/spinner2"
                 android:entries="@array/시간"

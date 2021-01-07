@@ -2,7 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.Eco" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
+<<<<<<< HEAD
         <item name="colorPrimary">@color/dark_green</item>
+=======
+        <item name="colorPrimary">@color/purple_500</item>
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
         <item name="colorPrimaryVariant">@color/background</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->

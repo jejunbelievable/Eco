@@ -2,12 +2,20 @@ package sundosoft.co.eco;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+=======
+import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 
 public class ReserveImageActivity extends AppCompatActivity {
     private Button send_btn;
@@ -15,9 +23,12 @@ public class ReserveImageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserve_image);
 
+<<<<<<< HEAD
         ActionBar actionBar=getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
 
+=======
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
         send_btn=findViewById(R.id.send_booking_button);
         send_btn.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -28,6 +39,7 @@ public class ReserveImageActivity extends AppCompatActivity {
             }
         });
     }
+<<<<<<< HEAD
 
 
     @Override //뒤로가기 메뉴
@@ -41,4 +53,6 @@ public class ReserveImageActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+=======
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
 }

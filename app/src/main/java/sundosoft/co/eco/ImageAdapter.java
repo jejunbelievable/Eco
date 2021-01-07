@@ -114,6 +114,10 @@ public class ImageAdapter extends ArrayAdapter {
                 }
             }
         });
+<<<<<<< HEAD
+=======
+
+>>>>>>> d3752d0696facf58fa8462a80210ca18094787b3
         return row;
     }
 
